@@ -17,6 +17,12 @@ void Train::addCage(const bool light) {
         elem->prev = first;
         p->prev = elem;
     }
+    if (light == false) {
+        countOp += 2;
+    }
+    if (light == true) {
+        countOp += getLength() * 2;
+    }
 }
 
 int Train::getLength() {
